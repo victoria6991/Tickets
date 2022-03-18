@@ -29,7 +29,6 @@ class ManagerTest {
     void returnTwoRelevant() {
         Flight[] expected = {four, one};
         Flight[] actual = manager.findAll("SVO", "ASF");
-        Arrays.sort(actual);
         assertArrayEquals(expected,actual);
     }
 
@@ -37,7 +36,6 @@ class ManagerTest {
     void returnOneRelevant() {
         Flight[] expected = {two};
         Flight[] actual = manager.findAll("VKO", "ASF");
-        Arrays.sort(actual);
         assertArrayEquals(expected,actual);
     }
 
@@ -45,7 +43,6 @@ class ManagerTest {
     void returnNothing() {
         Flight[] expected = {};
         Flight[] actual = manager.findAll("ASF", "ASF");
-        Arrays.sort(actual);
         assertArrayEquals(expected,actual);
     }
 }

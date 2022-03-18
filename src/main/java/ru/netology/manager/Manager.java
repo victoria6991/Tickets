@@ -24,6 +24,7 @@ public class Manager {
                 System.arraycopy(result, 0, tmp, 0, result.length);
                 tmp[tmp.length - 1] = flight;
                 result = tmp;
+                Arrays.sort(result);
             }
         }
         return result;
